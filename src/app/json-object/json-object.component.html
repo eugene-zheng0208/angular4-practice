@@ -1,0 +1,12 @@
+<p>
+  json-object works!
+</p>
+
+<ul>
+  <li *ngFor="let person of persons">
+    <!-- <p [ngStyle]="{'color': person.age > 25 ? '#f00' : '#0a0'}" (click)="checkAge(person.age)">{{ person.age }} and name is :- {{ person.name }}</p> -->
+    <p *ngIf="person.age < 25" (click)="checkAge(person.age)">{{ person.age }} and name is :- {{ person.name }}</p>
+
+
+  </li>
+</ul>

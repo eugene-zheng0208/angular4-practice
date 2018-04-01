@@ -1,0 +1,39 @@
+<h1>MY App Component {{title == 'Nugen' ? 'Working fine ' : 'no'}}</h1>
+<h1>color is {{
+      color == '#fff' 
+        ?
+         "White" : 
+        (
+          color == '#000' 
+          ?
+            'Black' : 
+            'Not a valid color'
+          )
+      }}</h1>
+
+<div> 
+      <app-contact></app-contact>
+
+    </div>
+
+
+    <!-- <button [disabled]='dis' (click)="printHello()"> Print Hello </button> -->
+
+    <input type="text" [(ngModel)]="name" (keyup)="setNameLength()">
+
+    <!-- <p (click)="resetName()">{{ name }}</p> -->
+    <!-- <p [ngClass]="[name_length > 5 ? 'red' : 'green' ]">{{ name }}</p> -->
+    <p [ngClass]="[checkColor()]">{{ name }}</p>
+    
+
+    <style>
+      .red{
+        color:#f00;
+      }
+      .green{
+        color:#0a0;        
+      }
+    </style>
+
+<app-json-object></app-json-object>
+
